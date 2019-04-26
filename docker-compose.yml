@@ -1,0 +1,14 @@
+version: '3'
+services:
+  amago:
+    privileged: true
+    build: '.'
+    image: amago/amago_place:2
+    container_name: amago2
+    restart: always
+    ports:
+      - "8088:80"
+    tty: true
+    volumes:
+      - ./:/www/
+     
